@@ -24,7 +24,6 @@ jobs:
 
     - name: Submit Azure ML Job
       run: |
-        cd src/model
-        az ml job create --file job.yml \
+        az ml job create --file src/job.yml \
           --resource-group hydra-eu-rg \
           --workspace-name hydra-eu-ws
