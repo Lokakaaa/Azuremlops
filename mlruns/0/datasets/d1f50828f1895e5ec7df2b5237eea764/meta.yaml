@@ -1,0 +1,86 @@
+digest: aac1919c
+name: dataset
+profile: '{"num_rows": 8222, "num_elements": 822200}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "TotalMiles", "required":
+  true}, {"type": "long", "name": "MultiPick", "required": true}, {"type": "long",
+  "name": "MultiDrop", "required": true}, {"type": "long", "name": "IsHot", "required":
+  true}, {"type": "long", "name": "MarkedInoperable", "required": true}, {"type":
+  "long", "name": "IsEnclosed", "required": true}, {"type": "double", "name": "ItemCount",
+  "required": true}, {"type": "long", "name": "LeadTime", "required": true}, {"type":
+  "long", "name": "TransitTime", "required": true}, {"type": "long", "name": "LengthOfHaul",
+  "required": true}, {"type": "boolean", "name": "CrossBorder", "required": true},
+  {"type": "double", "name": "ItemCountxTotalMiles", "required": true}, {"type": "long",
+  "name": "TenderedWOM", "required": true}, {"type": "long", "name": "TenderedWOY",
+  "required": true}, {"type": "long", "name": "TenderedMOY", "required": true}, {"type":
+  "boolean", "name": "TenderedSeasonSpring", "required": true}, {"type": "boolean",
+  "name": "TenderedSeasonSummer", "required": true}, {"type": "boolean", "name": "TenderedSeasonWinter",
+  "required": true}, {"type": "boolean", "name": "TenderedDOWFriday", "required":
+  true}, {"type": "boolean", "name": "TenderedDOWMonday", "required": true}, {"type":
+  "boolean", "name": "TenderedDOWThursday", "required": true}, {"type": "boolean",
+  "name": "TenderedDOWTuesday", "required": true}, {"type": "boolean", "name": "TenderedDOWWednesday",
+  "required": true}, {"type": "long", "name": "PickupWOM", "required": true}, {"type":
+  "long", "name": "PickupWOY", "required": true}, {"type": "long", "name": "PickupMOY",
+  "required": true}, {"type": "boolean", "name": "PickupSeasonSpring", "required":
+  true}, {"type": "boolean", "name": "PickupSeasonSummer", "required": true}, {"type":
+  "boolean", "name": "PickupSeasonWinter", "required": true}, {"type": "boolean",
+  "name": "PickupDOWFriday", "required": true}, {"type": "boolean", "name": "PickupDOWMonday",
+  "required": true}, {"type": "boolean", "name": "PickupDOWSaturday", "required":
+  true}, {"type": "boolean", "name": "PickupDOWThursday", "required": true}, {"type":
+  "boolean", "name": "PickupDOWTuesday", "required": true}, {"type": "boolean", "name":
+  "PickupDOWWednesday", "required": true}, {"type": "boolean", "name": "SpecialDateEnroute",
+  "required": true}, {"type": "boolean", "name": "SpecialDateOrder", "required": true},
+  {"type": "double", "name": "OriginFuelPrice", "required": true}, {"type": "double",
+  "name": "DestinationFuelPrice", "required": true}, {"type": "double", "name": "OriginLoadedTonnage",
+  "required": true}, {"type": "double", "name": "DestinationUnloadedTonnage", "required":
+  true}, {"type": "double", "name": "WageOrigin", "required": true}, {"type": "double",
+  "name": "WageDestination", "required": true}, {"type": "boolean", "name": "TenderedSeasonSpring.1",
+  "required": true}, {"type": "boolean", "name": "TenderedSeasonSummer.1", "required":
+  true}, {"type": "boolean", "name": "TenderedSeasonWinter.1", "required": true},
+  {"type": "boolean", "name": "TenderedDOWFriday.1", "required": true}, {"type": "boolean",
+  "name": "TenderedDOWMonday.1", "required": true}, {"type": "boolean", "name": "TenderedDOWThursday.1",
+  "required": true}, {"type": "boolean", "name": "TenderedDOWTuesday.1", "required":
+  true}, {"type": "boolean", "name": "TenderedDOWWednesday.1", "required": true},
+  {"type": "boolean", "name": "PickupSeasonSpring.1", "required": true}, {"type":
+  "boolean", "name": "PickupSeasonSummer.1", "required": true}, {"type": "boolean",
+  "name": "PickupSeasonWinter.1", "required": true}, {"type": "boolean", "name": "PickupDOWFriday.1",
+  "required": true}, {"type": "boolean", "name": "PickupDOWMonday.1", "required":
+  true}, {"type": "boolean", "name": "PickupDOWSaturday.1", "required": true}, {"type":
+  "boolean", "name": "PickupDOWThursday.1", "required": true}, {"type": "boolean",
+  "name": "PickupDOWTuesday.1", "required": true}, {"type": "boolean", "name": "PickupDOWWednesday.1",
+  "required": true}, {"type": "double", "name": "OriginFuelPrice.1", "required": true},
+  {"type": "double", "name": "DestinationFuelPrice.1", "required": true}, {"type":
+  "double", "name": "OriginLoadedTonnage.1", "required": true}, {"type": "double",
+  "name": "DestinationUnloadedTonnage.1", "required": true}, {"type": "boolean", "name":
+  "TenderedSeasonSpring.2", "required": true}, {"type": "boolean", "name": "TenderedSeasonSummer.2",
+  "required": true}, {"type": "boolean", "name": "TenderedSeasonWinter.2", "required":
+  true}, {"type": "boolean", "name": "TenderedDOWFriday.2", "required": true}, {"type":
+  "boolean", "name": "TenderedDOWMonday.2", "required": true}, {"type": "boolean",
+  "name": "TenderedDOWThursday.2", "required": true}, {"type": "boolean", "name":
+  "TenderedDOWTuesday.2", "required": true}, {"type": "boolean", "name": "TenderedDOWWednesday.2",
+  "required": true}, {"type": "boolean", "name": "PickupSeasonSpring.2", "required":
+  true}, {"type": "boolean", "name": "PickupSeasonSummer.2", "required": true}, {"type":
+  "boolean", "name": "PickupSeasonWinter.2", "required": true}, {"type": "boolean",
+  "name": "PickupDOWFriday.2", "required": true}, {"type": "boolean", "name": "PickupDOWMonday.2",
+  "required": true}, {"type": "boolean", "name": "PickupDOWSaturday.2", "required":
+  true}, {"type": "boolean", "name": "PickupDOWThursday.2", "required": true}, {"type":
+  "boolean", "name": "PickupDOWTuesday.2", "required": true}, {"type": "boolean",
+  "name": "PickupDOWWednesday.2", "required": true}, {"type": "double", "name": "OriginFuelPrice.2",
+  "required": true}, {"type": "double", "name": "DestinationFuelPrice.2", "required":
+  true}, {"type": "double", "name": "OriginLoadedTonnage.2", "required": true}, {"type":
+  "double", "name": "DestinationUnloadedTonnage.2", "required": true}, {"type": "double",
+  "name": "PathMean", "required": true}, {"type": "double", "name": "PathItemcount",
+  "required": true}, {"type": "double", "name": "PathStd", "required": true}, {"type":
+  "double", "name": "OriginCountryMean", "required": true}, {"type": "double", "name":
+  "OriginCountryItemcount", "required": true}, {"type": "double", "name": "OriginCountryStd",
+  "required": true}, {"type": "double", "name": "DestinationCountryMean", "required":
+  true}, {"type": "double", "name": "DestinationCountryItemcount", "required": true},
+  {"type": "double", "name": "DestinationCountryStd", "required": true}, {"type":
+  "double", "name": "OriginZipMean", "required": true}, {"type": "double", "name":
+  "OriginZipItemcount", "required": true}, {"type": "double", "name": "OriginZipStd",
+  "required": true}, {"type": "double", "name": "DestinationZipMean", "required":
+  true}, {"type": "double", "name": "DestinationZipItemcount", "required": true},
+  {"type": "double", "name": "DestinationZipStd", "required": true}]}'
+source: '{"tags": {"mlflow.user": "CarolynChen", "mlflow.source.name": "c:/Carolyn''s
+  workspace/Azuremlops/src/model/train.py", "mlflow.source.type": "LOCAL", "mlflow.source.git.commit":
+  "66c35ee7785763cb55420cd8bde697b3cb03519d"}}'
+source_type: code
