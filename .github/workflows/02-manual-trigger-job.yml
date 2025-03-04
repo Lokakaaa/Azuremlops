@@ -19,8 +19,12 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+    - name: Debug - List files
+      run: ls -R
+
     - name: Submit Azure ML Job
       run: |
-        az ml job create --file src/model/job.yml \
+        cd src/model
+        az ml job create --file job.yml \
           --resource-group hydra-eu-rg \
           --workspace-name hydra-eu-ws
