@@ -1,0 +1,67 @@
+name: Train Model with Azure ML
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  experiment:
+    runs-on: ubuntu-latest
+    environment: development
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+
+      - name: Install Azure ML CLI
+        run: |
+          az extension add --name ml -y
+
+      - name: Azure login
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+      - name: Run Experiment Job in Azure ML
+        run: |
+          az ml job create --file src/jobs/train-dev.yml 
+          --resource-group hydra-eu-rg \
+          --workspace-name hydra-eu-ws\
+          --stream
+    env:
+      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
+
+  production:
+    needs: experiment
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: '3.8'
+
+      - name: Install Azure ML CLI
+        run: |
+          pip install azure-ai-ml
+          az extension add --name ml -y
+
+      - name: Login to Azure
+        run: |
+          echo "$AZURE_CREDENTIALS" > creds.json
+          az login --service-principal --username "$(jq -r .clientId creds.json)" --password "$(jq -r .clientSecret creds.json)" --tenant "$(jq -r .tenantId creds.json)"
+          az account set --subscription "$(jq -r .subscriptionId creds.json)"
+
+      - name: Run Production Job in Azure ML
+        run: |
+          az ml job create --file src/jobs/train-prod.yml --stream
+    env:
+      AZURE_CREDENTIALS: ${{ secrets.AZURE_CREDENTIALS }}
