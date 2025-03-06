@@ -22,6 +22,10 @@ jobs:
     - name: Debug - List files
       run: ls -R
 
+    - name: Placeholder
+      run: |
+        echo "Will add code checks here in next challenge"
+
     - name: Debug - Check Account
       run: az account show
 
