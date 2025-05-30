@@ -21,18 +21,22 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Debug - List files
-      run: ls -R
+    # - name: Debug - List files
+    #   run: ls -R
 
-    - name: Placeholder
-      run: |
-        echo "Will add code checks here in next challenge"
+    # - name: Placeholder
+    #   run: |
+    #     echo "Will add code checks here in next challenge"
 
-    - name: Debug - Check Account
-      run: az account show
+    # - name: Debug - Check Account
+    #   run: az account show
 
     - name: Submit Azure ML Job
       run: |
-        az ml job create --file src/job.yml \
+        run_id=$(az ml job create --file src/job.yml \
           --resource-group hydra-eu-rg \
-          --workspace-name hydra-eu-ws
+          --workspace-name hydra-eu-ws \
+          --query name -o tsv
+
+    - name: Register Model in Azure ML (Python)
+      az ml model create -n model-example -v 1 -p runs:/$run_id/model --type mlflow_model
